@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Zone</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: rgb(251, 228, 232);
+        }
+
+        body {
+            margin: 20px 20px;
+        }
+
+        button {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="burger_zone">
+        <img src="./burger_zone.png" width="220" height="175" alt="Burger Zone">
+        <hr>
+        <h2>Create a burger!</h2>
+        <div>
+            <label for="">What type of protein would you like? </label>
+            <input type="text">
+            <hr>
+        </div>
+        <div>
+            <label for="">How many patties would you like? </label>
+            <input type="number">
+            <hr>
+        </div>
+        <div>
+            <label for="">How do you want your patty cooked? </label> <br>
+            <label for="">Rare</label>
+            <input type="range" min="1" max="5">
+            <label for="">Well-Done</label>
+            <hr>
+        </div>
+        <div>
+            <label for="">What toppings would you like? </label> <br>
+            <input type="checkbox" value="Lettuce" id="Lettuce">
+            <label for="Lettuce">Lettuce</label>
+            <input type="checkbox" value="Tomato" id="Tomato">
+            <label for="Tomato">Tomato</label>
+            <input type="checkbox" value="Onion" id="Onion">
+            <label for="Onion">Onion</label>
+            <hr>
+        </div>
+        <div>
+            <label for="">Would you like to add cheese? </label> <br>
+            <input type="radio" value="Yes" name="cheese" id="Yes">
+            <label for="Yes">Yes</label>
+            <input type="radio" value="No" name="cheese" id="No">
+            <label for="No">No</label>
+            <hr>
+        </div>
+        <div>
+            <label for="">What type of bun would you like? </label>
+            <select name="" id="">
+                <option value="">Sesame</option>
+                <option value="">Potato</option>
+                <option value="">Pretzel</option>
+            </select>
+            <hr>
+        </div>
+        <div>
+            <label for="">What type of sauce would you like? </label>
+            <input type="text" list="typing" name="">
+            <datalist id="typing">
+                <option value="ketchup"></option>
+                <option value="mayo"></option>
+                <option value="mustard"></option>
+            </datalist>
+            <hr>
+        </div>
+        <div>
+            <label for="">Anything else you want to add? </label><br>
+            <textarea name="message" id="" cols="40" rows="3"></textarea>
+            <hr>
+        </div>
+        <div>
+            <label for="">Select date of delivery </label>
+            <input type="date">
+            <hr>
+        </div>
+        <div class="btn-copy-text">
+            <label for="myInput">Your order id is </label>
+            <input type="text" value="BG0003488956" id="myInput">
+            <button onclick="myFunction(), alert('text coppied')">copy order id</button>
+            <script>
+                function myFunction() {
+                    var copyText = document.getElementById("myInput");
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999)
+                    document.execCommand("copy");
+                }
+            </script>
+            <hr>
+        </div>
+        <input style="background-color: lightblue;" type="reset">
+        <button type="submit" form="burger_zone">Submit</button>
+    </form>
+</body>
+
+</html>
